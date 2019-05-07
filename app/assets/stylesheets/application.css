@@ -1,0 +1,70 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+nav {
+    display: block;
+    height: 10vh;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #00aeef;
+    color: aliceblue;
+}
+
+li {
+    display: block;
+    text-align: center;
+    margin-left: 10px;
+    text-decoration: none;
+    float: left;
+    text-align: center;
+}
+
+.logout{
+    float: right;
+}
+
+.button_to{
+
+    margin: auto;
+}
+
+.cont {
+    background-color: whitesmoke;
+    color: #404040;
+    height: 100%;
+    display: flex;
+    overflow: hidden;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.hobby_table{
+    width: 100%;
+    border: 1px solid black;
+    text-align: center;
+    border-collapse: collapse;
+}
+.hobby_table tr{
+height: 30px;
+}
+
+
+.hobby_table tr:nth-child(odd){
+    background-color: #b3b3b3;
+
+}

@@ -1,0 +1,16 @@
+<h2>Your Hobbies</h2>
+<table class="hobby_table">
+<tr>
+<th>Hoobby Name</th>
+<th>Remove</th>
+</tr>
+<% @hobbies.each do |hobby|%>
+<tr>
+<td><%= hobby.name%></td> 
+<td>
+<%= button_to "Remove hobby", user_hobbies_user_path(id: current_user.id,hobby_id:hobby.id), method: :delete %>
+</td>
+</tr>
+<% end %>
+</table>
+<p>To add a hobby return hobby list list <%= link_to "Hobbies List", hobbies_path %>  </p>

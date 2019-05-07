@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Indoor</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+  <nav>
+  <% if user_signed_in? %>
+    <ul>
+    <li>User: <%= current_user.username %></li>
+    <li><%= link_to "My Hobbies",user_hobbies_users_path(current_user)%>
+    <li><%= link_to "Others Hobbies",user_near_users_path(current_user)%>
+    <li class="logout"><%= button_to "Log out", destroy_user_session_path, method: :delete %></li>
+
+    <li class="IP">IP: <%=current_user.current_sign_in_ip%></li>
+    </ul>
+    <%# else %>
+    <%#<h4>Would you like to log in<%= link_to "Log in", new_session_path(resource_name) %><h4>
+    <% end %>
+    </nav>
+    <div class ="cont">
+    <%= yield %>
+    <div>
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
+  </body>
+</html>

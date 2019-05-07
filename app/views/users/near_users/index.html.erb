@@ -1,0 +1,21 @@
+<h2>Near Users</h2>
+<% if @users.present?%>
+<table class="hobby_table">
+<tr>
+<th>UserName</th>
+<th>Distance</th>
+<th>Hobbies</th>
+</tr>
+
+<% @users.each do |user|%>
+<tr>
+<td><%= user.username%></td> 
+<td><%= user.distance.round(2)%> Km</td>
+<td><%=user.hobbies.pluck(:name).join(',')%></td>
+</tr>
+<% end %>
+<% else %>
+<p><%=@err%></p>
+<% end %>
+</table>
+<p>To add a hobby return hobby list list <%= link_to "Hobbies List", hobbies_path %>  </p>

@@ -1,0 +1,7 @@
+<h2>Home</h2>
+  <% if !user_signed_in? %>
+    <p>Would you like to log in <%= link_to "Log in", new_user_session_path %></p>
+    <p>Sign up if you dont have account <%= link_to "Log up", new_user_registration_path %> </p>
+    <% else %>
+    <p>Check <%= link_to "Hobbies List", hobbies_path %>  </p>
+  <% end %>
