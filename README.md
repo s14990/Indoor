@@ -23,5 +23,5 @@ https://sleepy-ridge-96418.herokuapp.com/users/1/near_users
 https://sleepy-ridge-96418.herokuapp.com/users/4/near_users
 
 -Used rspec for few tests of model and controllers(only basic ones)
--Used factory for hobby with Faker (not sure there was no sense in that)
+-Used factory for hobby with Faker (not sure there was any point in that)
 -Added error handling as we were doing it on RoR/LevelUp
